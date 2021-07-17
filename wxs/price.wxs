@@ -1,0 +1,34 @@
+function mainPrice(price, discount_price) {
+    if (!discount_price) {
+        return {
+            price: price,
+            display: true
+        }
+    } else {
+        return {
+            price: discount_price,
+            display: true
+        }
+    }
+}
+
+function slashedPrice(price, discount_price) {
+    if (discount_price) {
+        return {
+            price: price,
+            display: true
+        }
+    } else {
+        return {
+            price: null,
+            display: false
+        }
+    }
+}
+
+module.exports = {
+    //ES5语法贼蛋疼,还要把各个导出的函数/属性/对象写进一个对象里
+    //ES6一个exports就解决了好吗
+    mainPrice: mainPrice,
+    slashedPrice: slashedPrice
+}

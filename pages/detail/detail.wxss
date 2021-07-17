@@ -1,0 +1,20 @@
+/* pages/detail/detail.wxss */
+.container{
+    display:flex;
+    flex-direction:column;
+}
+.l-tag{
+    font-size: 20rpx;
+    color: #157658;
+    background-color: #DCEBE6;
+    margin-right: 5rpx !important;
+}
+.inner-container{
+    display:flex;
+    flex-direction:row;
+}
+.tabbar{
+    position: fixed;
+/*  脱离文档流  */
+    bottom: 0;
+}

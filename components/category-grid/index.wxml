@@ -1,0 +1,20 @@
+<!--components/category-grid/index.wxml-->
+<view class="container">
+    <!--    <view  class="inner-container"> 这个使用父元素更改样式可以是可以容易出问题-->
+    <!-- 直接的内部样式类class对自定义组件无效的
+           需要使用外部样式类传递到小程序内部才能作用到组件内部的元素上去-->
+    <l-grid l-class="inner-container">
+        <!--换句话来讲可以认为l-grid没有class属性有l-class属性然后进行传递-->
+        <block wx:for="{{grid}}" wx:key="index">
+            <l-grid-item key="{{index}}" slot="{{index}}">
+                <!--一个插槽只能插入一个元素-->
+                <view class="grid-item">
+                    <!--一个组件的数据不一定从某个固定的api而来，
+                    所以最好用接受数据的方式由调用方来发送http请求-->
+                    <image class="img" src="{{item.img}}"></image>
+                    <text class="text">{{item.title}}</text>
+                </view>
+            </l-grid-item>
+        </block>
+    </l-grid>
+</view>

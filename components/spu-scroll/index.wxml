@@ -1,0 +1,37 @@
+<!--components/spu-scroll/index.wxml-->
+<wxs src="../../miniprogram_npm/lin-ui/filter/string.wxs" module="s"></wxs>
+<!--使用wxs可以简单的使用函数在wxml中的应用-->
+<view class="container l-class">
+    <!--l-class外部样式类在js中设定后要在父元素和祖先元素上设置class等待传入的class
+    这个等待的class要在引用本组件的页面或者组件的wxss上加上值，说明引用本组件时外部样式类不是
+    写死的，保持灵活性 写在大view上就是作用在整个大view上 所以会发现lin-ui很多组件都有
+    多个外部样式类，他们作用在不同的元素上 -->
+    <image class="title" src="{{theme.title_img}}"></image>
+    <text class="">{{themeE.title}}</text>
+    <scroll-view scroll-x="true" class="scroll-view">
+        <!-- enable-flex       启用 flexbox 布局。
+        开启后，当前节点声明了 display: flex 就会成为 flex container，并作用于其子节点-->
+        <view class="inner">
+            <block wx:for="{{spuList}}" wx:key="index" class="">
+                <view class="spu-container">
+                    <image class="spu-img" src="{{item.img}}"></image>
+                    <text class="spu-text">{{item.title.length>=8?s.substring(item.title,0,7)+'...':item.title}}</text>
+                    <l-price value="{{item.price}}"
+                             autofix="true"
+                             l-class=""
+                             l-unit-class="price-unit"
+                             l-value-class="price-value"
+                    ></l-price>
+                </view>
+            </block>
+        </view>
+    </scroll-view>
+    <!--原生小程序的组件    -->
+    <!--    价格外部样式类 (Price ExternalClasses)
+    外部样式类名	说明	备注
+    l-class	覆盖价格部分的外部样式类 整体	---
+    l-unit-class	覆盖价格单位￥的外部样式类	---
+    l-value-class	覆盖价格数字部分777的外部样式类
+    如果需要少量更改样式可以使用预先给的属性
+    格式化和精度的问题-->
+</view>

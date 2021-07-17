@@ -1,0 +1,57 @@
+/* pages/home/home.wxss
+rpx和px的换算2:1
+rpx关闭语法检查
+*/
+/*.container{*/
+/*    background-color: #000000;*/
+/*}*/
+
+.top-theme{
+    width: 100%;
+    height: 260rpx;
+    display: flex;
+}
+.swiper{
+    width: 100%;
+    height: 360rpx;
+}
+.activity{
+    margin-top: 20rpx;
+    width: 100%;
+    height: 260rpx;
+    display: flex;
+
+}
+.quality{
+    width: 100%;
+    height: 880rpx;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    display: flex;
+
+/*为什么要用flex布局 不是视图容器要用这个吗    */
+}
+.fashion{
+    width: 100%;
+    height: 880rpx;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    display: flex;
+
+}
+.spu-scroll{
+    margin-top: 20rpx;
+}
+.spu-bottom{
+    margin-top: 20rpx;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.title-spu-bottom{
+    width: 690rpx;
+    height: 70rpx;
+    margin-bottom: 38rpx;
+}
+/*lets encrypt 获取https*/

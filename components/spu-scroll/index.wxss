@@ -1,0 +1,48 @@
+/* components/spu-scroll/index.wxss */
+.container{
+    padding: 42rpx 0 34rpx 28rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+ }
+.title{
+    width:694rpx;
+    height: 90rpx;
+}
+.inner{
+    display: flex;
+    flex-direction: row;
+}
+.price-unit{
+    font-size: 20rpx !important;
+    color: #000000 !important;
+}
+.price-value{
+    font-size: 22rpx !important;
+    font-weight: 500 !important;
+    color: #000000 !important;
+}
+.scroll-view{
+    margin-top: 28rpx;
+    display: flex;
+    flex-direction: row;
+/*通常来讲，没有设置高度一般都是靠内部元素撑起来的高度
+但是scroll-view是原生的小程序，他的行为和html是有所改变*/
+}
+.spu-container{
+    margin-right: 60rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.spu-img{
+    width: 160rpx;
+    height: 160rpx;
+}
+.spu-text{
+    font-size: 20rpx;
+    margin-top: 20rpx;
+}
+/*important不会被覆盖*/

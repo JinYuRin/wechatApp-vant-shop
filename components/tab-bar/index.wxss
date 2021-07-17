@@ -1,0 +1,62 @@
+/* components/tab-bar/index.wxss */
+.iconfont{
+    font-family: iconfont !important;
+}
+.container{
+    display:flex;
+    flex-direction:row;
+    height: 100rpx;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+.icons{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-around;
+    width: 230rpx;
+    height: 100%;
+    color: #999999;
+    box-sizing: border-box;
+    padding-left: 16rpx;
+    padding-right: 22rpx;
+}
+.icons > view:first-child{
+     /*icons的子代选择器的样式*/
+     display:flex;
+     flex-direction:column;
+     align-items: center;
+     justify-content: center;
+     width: 50%;
+     height: 100%;
+ }
+.icons > view:nth-child(2){
+    padding-top: 2rpx;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+.icons text{
+    font-size: 20rpx;
+}
+.btn-font{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 32rpx;
+}
+.buy{
+    background-color: #157658;
+    height: 100%;
+    width: 260rpx;
+}
+.cart{
+    background-color: #333333;
+    height: 100%;
+    width: 260rpx;
+}

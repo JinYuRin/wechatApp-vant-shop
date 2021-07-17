@@ -1,0 +1,40 @@
+/* components/hot-list/index.wxss */
+@import "../../wxss/sleeve.wxss";
+/*自定义组件无法接受app.wxss*/
+.container{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    padding-top: 40rpx;
+/*    padding 和margin的区别 外边距和内边距？？？？*/
+    background-color: #ffffff;
+/*外边距是与外界元素之间的边距，内边距是在容器内产生边距调整内部的位置    */
+}
+.inner-container{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 32rpx;
+}
+.title{
+    width: 690rpx;
+    height: 90rpx;
+}
+.left{
+    width: 346rpx;
+    height: 522rpx;
+    display: flex;
+}
+.right-container{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-between;
+}
+.right-size{
+    width: 400rpx;
+    height: 260rpx;
+    display: flex;
+}
+

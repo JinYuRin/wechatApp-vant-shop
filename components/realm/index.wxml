@@ -1,0 +1,57 @@
+<wxs src="../../wxs/price.wxs" module="p"></wxs>
+
+<view class="container">
+    <view class="sku-preview">
+        <image src="{{previewImg}}" class="sku-img"></image>
+        <view class="sku-description">
+            <text class="title">{{title}}</text>
+            <view>
+                <view class="price-row">
+                    <l-price
+                            color="#157658"
+                            value-size="28"
+                            unit-size="20"
+                            autofix
+                            value="{{p.mainPrice(price,discountPrice).price}}">
+                    </l-price>
+                    <l-price
+                            wx:if="{{p.slashedPrice(price,discountPrice).display}}"
+                            color="#999999"
+                            size="26"
+                            deleted
+                            l-class="discount-price"
+                            value="{{p.slashedPrice(price,discountPrice).price}}">
+                    </l-price>
+                    <view wx:if="{{stock && stock>=10}}" class="stock">库存：{{stock}}件</view>
+                    <view wx:if="{{stock && stock<10 && stock!=0}}" class="stock-pinch">仅剩：{{stock}}件</view>
+                </view>
+                <view wx:if="{{!noSpec}}" class="sku-pending">
+                    <text wx:if="{{!skuIntact}}">请选择：</text>
+                    <text wx:else>已选择：</text>
+                    <text wx:if="{{!skuIntact}}">{{missingKeys}}</text>
+                    <text wx:else>{{currentValues}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="hr"></view>
+    <view class="fences-container">
+        <block wx:for="{{fences}}" wx:key="{{index}}">
+            <s-fence x="{{index}}" bind:celltap="onCellTap" fence="{{item}}"></s-fence>
+            <!--            这个写法不就是vue也有的写法吗！！！事件传递啊-->
+        </block>
+    </view>
+    <view class="counter-container">
+        <text class="text">购买数量</text>
+        <s-counter bind:lintap="onSelectCount"></s-counter>
+    </view>
+<!--还可以这样子在使用的组件上直接绑定事件的回调函数,其实是因为这个组件的内部l-counter已经有了自定义的lintap事件
+我们自己写的tab-bar则没有写好的类似于l-counter的组件-->
+</view>
+<view wx:if="{{!outStock}}" class="bottom-btn">
+    <text wx:if="{{isBuy}}">立即购买</text>
+    <text wx:else>加入购物车</text>
+</view>
+<view wx:else class="bottom-btn out-stock">
+    <text>暂时缺货</text>
+</view>

@@ -1,0 +1,61 @@
+/* demo.wxss */
+.container {
+    display:flex;
+    flex-direction:column;
+    width: 340rpx !important;
+    padding: 0 0 20rpx 0 !important;
+    background-color: #fff !important;
+    box-shadow: 0px 8rpx 20rpx 0px rgba(9, 36, 66, 0.04) !important;
+    border-radius: 16rpx !important;
+    overflow: hidden;
+    margin-bottom: 20rpx;
+}
+
+.img {
+    /*width: 100%;*/
+    /*height: 380rpx;*/
+}
+
+.content-container {
+    padding: 0 10rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 28rpx;
+    color: #333333;
+}
+
+/*.tag {*/
+/*    height: 30rpx !important;*/
+/*    line-height: 30rpx !important;*/
+/*}*/
+
+.subtitle {
+    font-size: 23rpx;
+    color: #999;
+    margin-top: 15rpx;
+    margin-bottom: 15rpx;
+    display: flex;
+    flex-wrap: wrap;
+/*     flex-wrap: wrap;适配？？？   */
+}
+.tags{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+.l-tag{
+    font-size: 20rpx;
+    color: #157658;
+    background-color: #DCEBE6;
+    margin-right: 5rpx !important;
+}
+.price-row{
+    display:flex;
+    flex-direction:row;
+}
+.discount-price{
+    margin-left: 20rpx;
+}

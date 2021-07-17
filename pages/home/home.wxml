@@ -1,0 +1,41 @@
+<!--pages/home/home.wxml-->
+<l-loadmore show type="{{loadingType}}" end-text="已经没了">
+    <view slot="content" class="container">
+        <image class="top-theme" src="{{themeA.entrance_img}}"></image>
+        <!--图片和下面的元素自带一个间距 使用flex布局来解决 activity也是同理    -->
+        <swiper class="swiper" indicator-dots circular autoplay="{{true}}" interval="5000">
+            <block wx:for="{{bannerB.items}}" wx:key="index">
+                <swiper-item>
+                    <image class="swiper" src="{{item.img}}"></image>
+                    <!--swiper-item里面写的html内容被叫做slot插槽
+                                    使用的插槽要有高宽时，swiper组件的class必须也是同步的-->
+                </swiper-item>
+            </block>
+        </swiper>
+<!--        <swiper>-->
+<!--            <block wx:for="{{bannerB.items}}" key="index"></block>-->
+<!--            <swiper-item>-->
+<!--                <image class="" src="{{item.img}}"></image>-->
+<!--            </swiper-item>-->
+<!--        </swiper>-->
+<!--使用block标签做循环wx:for="" key="index",也可以自定义key的值，默认为数组的序号-->
+        <s-category-grid grid="{{gridC}}"></s-category-grid>
+        <!--grid是组件接受的属性，在Vue中就是加了 :grid这样而已    -->
+        <image class="activity" src="{{activityD.entrance_img}}"></image>
+        <s-spu-scroll
+                l-class="spu-scroll"
+                theme="{{themeE}}"
+                spu-list="{{themeESpu}}"
+                wx:if="{{themeE.online}}"
+        ></s-spu-scroll>
+        <image class="quality" src="{{themeF.entrance_img}}"></image>
+        <!--在组件在使用时接受的属性是spuList驼峰命名的小程序中需要转换成snake
+        但是在组件的js中要用驼峰-->
+        <s-hot-list banner="{{bannerG}}"></s-hot-list>
+        <image class="fashion" src="{{themeH.entrance_img}}"></image>
+        <view class="spu-bottom">
+            <image class="title-spu-bottom" src="/img/home/download.png"></image>
+            <l-water-flow generic:l-water-flow-item="s-spu-preview"></l-water-flow>
+        </view>
+    </view>
+</l-loadmore>

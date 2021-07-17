@@ -1,0 +1,13 @@
+<view class="container">
+    <image class="title" src="{{banner.img}}"></image>
+    <view class="inner-container">
+        <view hover-class="rect-hover" hover-stay-time="2000">
+            <image class="left" src="{{left.img}}"></image>
+        </view>
+        <!--目前只有view，button和navigator支持点击态class-->
+        <view class="right-container">
+            <image class="right-size" src="{{rightTop.img}}"></image>
+            <image class="right-size" src="{{rightBottom.img}}"></image>
+        </view>
+    </view>
+</view>

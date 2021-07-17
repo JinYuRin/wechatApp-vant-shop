@@ -1,0 +1,14 @@
+<l-counter l-count-class="all-background input-size"
+           l-symbol-class=" font-color"
+           l-disable-class="all-background"
+           l-class="container"
+           count="{{count}}"
+           min="{{min}}"
+           max="{{max}}"
+           bind:linout="onOverStep"
+>
+    <!--l-class使用在整体上-->
+<!--    bind:lintap="onTap"-->
+
+    <!--如何自定义组件的事件触发机制 把事件传出去          -->
+</l-counter>

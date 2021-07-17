@@ -1,0 +1,35 @@
+<!--&lt;!&ndash;pages/detail/detail.wxml&ndash;&gt;-->
+<!--<text>pages/detail/detail.wxml</text>-->
+<view class="container">-->
+    <block wx:for="{{keys}}" wx:key="index">
+        <view class="inner-container">
+            <text>{{item}}</text>
+            <block wx:for="{{valuesArr[index]}}" wx:key="index">
+                <l-tag bind:lintap="linTap"
+                       plain type="reading" l-class="l-tag" size="super-mini">{{item}}
+                </l-tag>
+            </block>
+        </view>
+    </block>
+</view>
+<view>
+    <s-realm></s-realm>
+</view>
+<s-tab-bar class="tabbar" bind:AddtoCart="onAddtoCart" bind:GotoHome="onGotoHome"
+           bind:Buy="onBuy" bind:GotoCart="onGotoCart"
+></s-tab-bar>
+<l-popup show="{{showRealm}}" content-align="bottom">
+    <s-realm spu="{{spu}}" isBuy="{{isBuy}}"></s-realm>
+</l-popup>
+<!-- onGotoHome(event){
+      this.triggerEvent("GotoHome")
+    },
+    onGotoCart(event){
+      this.triggerEvent("GotoCart")
+    },
+    onAddToCart(event){
+      this.triggerEvent("AddtoCart")
+
+    },
+    onBuy(event){
+      this.triggerEvent("Buy")-->

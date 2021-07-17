@@ -1,0 +1,20 @@
+/* components/counter/index.wxss */
+.all-background{
+    background-color: transparent !important;
+/*  transparent父元素的颜色也就是透明了  */
+}
+.container{
+    border: 3rpx solid #157658 !important;
+    height: 48rpx !important;
+}
+/*由于小程序中input是有自带的高度的，在这里设置成和整体一样的高度*/
+.input-size{
+    min-height: 48rpx !important;
+    line-height: 48rpx !important;
+}
+.font-color{
+    color: #157658 !important;
+}
+.disable{
+    background-color: #DCEBE6;
+}
