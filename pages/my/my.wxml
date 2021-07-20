@@ -1,5 +1,5 @@
 <view>
-    <view class="flex align-center justify-between px-2 py-5">
+    <view class="flex align-center justify-between px-2">
         <view class="flex align-center">
             <image class="rounded-circle mr-2" src="/img/user/user.jpg" style="width: 150rpx;height: 150rpx;"></image>
             <view class="font-lg font-weight-bolder flex-shrink">刘工</view>

@@ -12,14 +12,28 @@
 /*} */
 /*和home页面的container相冲突*/
 page {
-    /*全局样式*/
-    /* background-color: #f5f5f5; */
+  /*全局样式*/
+  /* background-color: #f5f5f5; */
 }
 
+/*每个页面公共css */
+/* 引入官方样式库 */
+/* 玛德小程序居然不支持@import url("./common/free.wxss");这个写法，直接导入地址就可以了，而且还必须是wxss */
+/* @import url("./common/uni.css"); */
+/* 引入animate动画库 */
+@import "./common/animate.wxss";
+/* 引入free样式库 */
+@import "./common/free.wxss";
+/* 引入全局样式库 */
+@import "./common/common.wxss";
+/* 引入自定义图标库 */
+/* @import url("./common/icon.css"); */
+
 @font-face {
-    font-family: 'iconfont';  /* project id 1556606 */
-    src: url('//at.alicdn.com/t/font_1556606_k0xshxy52pn.eot');
-    src: url('//at.alicdn.com/t/font_1556606_k0xshxy52pn.eot?#iefix') format('embedded-opentype'),
+  font-family: 'iconfont';
+  /* project id 1556606 */
+  src: url('//at.alicdn.com/t/font_1556606_k0xshxy52pn.eot');
+  src: url('//at.alicdn.com/t/font_1556606_k0xshxy52pn.eot?#iefix') format('embedded-opentype'),
     url('//at.alicdn.com/t/font_1556606_k0xshxy52pn.woff2') format('woff2'),
     url('//at.alicdn.com/t/font_1556606_k0xshxy52pn.woff') format('woff'),
     url('//at.alicdn.com/t/font_1556606_k0xshxy52pn.ttf') format('truetype'),
@@ -27,11 +41,12 @@ page {
 }
 
 /*引入font-family要强调优先级*/
-.iconfont{
+.iconfont {
   font-family: iconfont !important;
   font-size: 80rpx !important;
 }
+
 /*:before是伪类啊*/
-.l-icon-home:before{
+.l-icon-home:before {
   content: "\e611";
 }
