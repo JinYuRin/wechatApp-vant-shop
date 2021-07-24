@@ -18,7 +18,7 @@ page {
 
 /*每个页面公共css */
 /* 引入官方样式库 */
-/* 玛德小程序居然不支持@import url("./common/free.wxss");这个写法，直接导入地址就可以了，而且还必须是wxss */
+/* !玛德小程序居然不支持@import url("./common/free.wxss");这个写法，直接导入地址就可以了，而且还必须是wxss */
 /* @import url("./common/uni.css"); */
 /* 引入animate动画库 */
 @import "./common/animate.wxss";

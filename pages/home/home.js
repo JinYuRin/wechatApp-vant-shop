@@ -1,17 +1,43 @@
 // pages/home/home.js
-import {Theme} from "../../models/theme";
-import {Banner} from "../../models/banner";
-import {Category} from "../../models/category";
-import {Activity} from "../../models/activity";
-import {SpuPaging} from "../../models/spu-paging";
+import {
+    Theme
+} from "../../models/theme";
+import {
+    Banner
+} from "../../models/banner";
+import {
+    Category
+} from "../../models/category";
+import {
+    Activity
+} from "../../models/activity";
+import {
+    SpuPaging
+} from "../../models/spu-paging";
 
-Page({//其实page就是一个对象，里面包含属性和方法
+Page({ //其实page就是一个对象，里面包含属性和方法
 
     /**
      * 页面的初始数据
      */
     data: {
-        themeA: null,//null也是一个Object，先标记起来
+        swiperList: [{
+            id: 0,
+            src: '/img/home/banner1.jpg'
+        }, {
+            id: 1,
+            src: '/img/home/banner2.jpg'
+        }, {
+            id: 2,
+            src: '/img/home/banner3.jpg'
+        }, {
+            id: 3,
+            src: '/img/home/banner4.jpg'
+        }, {
+            id: 4,
+            src: '/img/home/banner5.jpg'
+        }, ],
+        themeA: null, //null也是一个Object，先标记起来
         themeE: null,
         themeF: null,
         themeH: null,
@@ -33,7 +59,7 @@ Page({//其实page就是一个对象，里面包含属性和方法
          * Object.url等等
          * 最好将请求进行封装
          */
-        this.initAllData()//调用本js方法还要这样子的，那和java一样啊
+        this.initAllData() //调用本js方法还要这样子的，那和java一样啊
         // const data = await Theme.getHomeLocationA(
         //     //   data => {
         //     // this.setData({//setData作为回调函数来使用，那这个{}里面写的是什么呢
@@ -55,14 +81,14 @@ Page({//其实page就是一个对象，里面包含属性和方法
         // this.setData({
         //     banner1:banner.items
         // })
-//原本this将要指向调用这个函数的onLoad函数的(记住不是getHomeLocationA因为这是被调用的函数，数据不在这里)
-// 由于箭头函数，this指向了page
-//     })
+        //原本this将要指向调用这个函数的onLoad函数的(记住不是getHomeLocationA因为这是被调用的函数，数据不在这里)
+        // 由于箭头函数，this指向了page
+        //     })
         this.initBottomSpuList()
     }
 
     ,
-    async initAllData() {//含有异步方法需要加async
+    async initAllData() { //含有异步方法需要加async
         // 把生命周期函数和其他方法写在了一起
         // Test.test()//测试我写的api
         const theme = new Theme()
@@ -80,7 +106,7 @@ Page({//其实page就是一个对象，里面包含属性和方法
             const data = await Theme.getHomeLocationESpu()
             //必须使用await是因为要等待异步方法返回的结果
             if (data) {
-                themeESpu = data.spu_list.slice(0, 7)//slice是截取数组的函数
+                themeESpu = data.spu_list.slice(0, 7) //slice是截取数组的函数
             }
         }
         // const a=b.find(t=>t.name==='11');//值得一说的是string是属于基本类型，所以用===没问题
@@ -94,8 +120,8 @@ Page({//其实page就是一个对象，里面包含属性和方法
         const activityD = await Activity.getHomeLocationD()
         const bannerG = await Banner.getHomeLocationG()
         this.setData({
-            themeA,//按照排序的序号来找是不靠谱的，可以试试用函数式编程用find
-            bannerB,//同名不用写赋值？？？
+            themeA, //按照排序的序号来找是不靠谱的，可以试试用函数式编程用find
+            bannerB, //同名不用写赋值？？？
             gridC,
             activityD,
             themeE,
@@ -125,40 +151,35 @@ Page({//其实page就是一个对象，里面包含属性和方法
      */
     onReady: function () {
 
-    }
-    ,
+    },
 
     /**
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
 
-    }
-    ,
+    },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
     onHide: function () {
 
-    }
-    ,
+    },
 
     /**
      * 生命周期函数--监听页面卸载
      */
     onUnload: function () {
 
-    }
-    ,
+    },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh: function () {
 
-    }
-    ,
+    },
 
     /**
      * 页面上拉触底事件的处理函数
@@ -174,8 +195,7 @@ Page({//其实page就是一个对象，里面包含属性和方法
                 loadingType: 'end'
             })
         }
-    }
-    ,
+    },
 
     /**
      * 用户点击右上角分享

@@ -1,1 +1,24 @@
-<text class="text-light-muted" selectable="false" space="false" decode="false">123</text>
+<!-- 通过sticky属性可以开启粘性布局，粘性布局下，当 Tab 滚动到顶部时会自动吸顶。 -->
+<van-tabs swipeable title-active-color="#ee0a24" lazy-render line-height="0px">
+    <van-tab title="推荐">
+        <swiper style="box-sizing:border-box" class="w-100 p-1 rounded-lg" indicator-dots="false" indicator-color="rgba(0,0,0,.3)" autoplay="false" current="0" current-item-id="" interval="5000" duration="1000" circular="false" previous-margin="false" next-margin="0px" display-multiple-items="1" skip-hidden-item-layout="false" bindchange="" bindanimationfinish="">
+            <!-- 默认取名为item和index -->
+            <block wx:for="{{swiperList}}" wx:key="{{item.id}}">
+                <swiper-item class="w-100 rounded-lg" item-id="">
+                    <image class="w-100 rounded-lg" style="height:100%" src="{{item.src}}" mode="aspectFill" lazy-load="false" binderror="" bindload=""></image>
+                </swiper-item>
+            </block>
+        </swiper>
+        <!-- 外部样式类为何不起作用????? -->
+        <van-grid custom-class="grid" column-num="5">
+            <van-grid-item icon="photo-o" text="文字" wx:for="{{ 10 }}" />
+        </van-grid>
+    </van-tab>
+    <van-tab title="手机">内容 2</van-tab>
+    <van-tab title="智能">内容 3</van-tab>
+    <van-tab title="电视">内容 4</van-tab>
+    <van-tab title="笔记本">内容 5</van-tab>
+    <van-tab title="家电">内容 6</van-tab>
+    <van-tab title="生活周边">内容 7</van-tab>
+    <van-tab title="学习">内容 8</van-tab>
+</van-tabs>

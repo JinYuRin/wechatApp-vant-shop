@@ -1,5 +1,9 @@
 {
   "usingComponents": {
+    "van-grid": "/miniprogram_npm/@vant/weapp/grid/index",
+    "van-grid-item": "/miniprogram_npm/@vant/weapp/grid-item/index",
+    "van-tab": "/miniprogram_npm/@vant/weapp/tab/index",
+    "van-tabs": "/miniprogram_npm/@vant/weapp/tabs/index",
     "s-category-grid": "/components/category-grid/index",
     "s-spu-scroll": "/components/spu-scroll/index",
     "s-hot-list": "/components/hot-list/index",
