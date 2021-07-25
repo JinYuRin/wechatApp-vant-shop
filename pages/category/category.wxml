@@ -1,2 +1,37 @@
-<!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+<view class="flex">
+    <van-sidebar active-key="{{ 0 }}">
+        <van-sidebar-item title="推荐分类" />
+        <van-sidebar-item title="京东超市" />
+        <van-sidebar-item title="男装" />
+        <van-sidebar-item title="女装" />
+        <van-sidebar-item title="童装" />
+        <van-sidebar-item title="奢侈品" />
+        <van-sidebar-item title="家电" />
+        <van-sidebar-item title="箱包" />
+        <van-sidebar-item title="内衣配饰" />
+        <van-sidebar-item title="数码" />
+        <van-sidebar-item title="电脑办公" />
+        <van-sidebar-item title="生鲜" />
+        <van-sidebar-item title="食品酒饮" />
+        <van-sidebar-item title="户外运动" />
+        <van-sidebar-item title="工业品" />
+    </van-sidebar>
+    <view class="flex-1">
+        <view class="p-3">
+            <view class="font font-weight-bold">热门分类</view>
+            <van-grid icon-size="50px" custom-class="grid" column-num="3" border="{{false}}">
+                <block wx:for="{{grids}}">
+                    <van-grid-item custom-class="grid-item" text-class="grid-item-text" content-class="grid-content" icon="{{item.src}}" text="{{item.title}}" />
+                </block>
+            </van-grid>
+        </view>
+        <view class="p-3">
+            <view class="font font-weight-bold">智能设备</view>
+            <van-grid icon-size="50px" custom-class="grid" column-num="3" border="{{false}}">
+                <block wx:for="{{grids}}">
+                    <van-grid-item custom-class="grid-item" text-class="grid-item-text" content-class="grid-content" icon="{{item.src}}" text="{{item.title}}" />
+                </block>
+            </van-grid>
+        </view>
+    </view>
+</view>

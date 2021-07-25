@@ -2,7 +2,7 @@
     <view class="flex align-center justify-between px-2">
         <view class="flex align-center">
             <image class="rounded-circle mr-2" src="/img/user/user.jpg" style="width: 150rpx;height: 150rpx;"></image>
-            <view class="font-lg font-weight-bolder flex-shrink">刘工</view>
+            <view class="font-lg font-weight-bolder flex-shrink">金鳞</view>
         </view>
         <view style="background-color: rgba(0, 0, 0, 0.1);width: 200rpx;height: 70rpx;" class="flex align-center justify-center bg-light rounded-circle font-md font-weight-bolder">
             <!-- <text class="iconfont icon-bofang mr-1"></text> -->

@@ -5,7 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    grids: [{
+        src: '/img/home/cate1.jpg',
+        title: '空调'
+      },
+      {
+        src: '/img/home/cate2.png',
+        title: '手机'
+      },
+      {
+        src: '/img/home/cate3.jpg',
+        title: '加湿器'
+      },
+      {
+        src: '/img/home/cate3.jpg',
+        title: '加湿器'
+      }
+    ],
   },
 
   /**

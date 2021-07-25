@@ -21,12 +21,51 @@ Page({ //其实page就是一个对象，里面包含属性和方法
      * 页面的初始数据
      */
     data: {
+        // 
+        demo: [{
+            image: '/img/home/spu1.jpg',
+            title: '显瘦中长款系带风衣',
+            describe: '柔软顺滑、上身挺括显瘦，垂坠飘逸、不易皱好打理。',
+            count: '888',
+            delCount: '666'
+        }, {
+            image: '/img/home/spu2.jpg',
+            title: '汉服女原创春夏',
+            describe: '异志阁 原创情侣重工汉服[玉鸾•梵翎秋冬交领襦裙一片式齐腰襦裙',
+            count: '888',
+            delCount: '666'
+        }, {
+            image: '/img/home/spu3.jpg',
+            title: '汉服女原创春夏',
+            describe: '柔软顺滑垂坠飘逸。',
+            count: '888',
+            delCount: '666'
+        }, {
+            image: '/img/home/spu4.jpg',
+            title: '汉服女原创春夏',
+            describe: '异志阁 原创情侣重工汉服[玉鸾•梵翎秋冬交领襦裙一片式齐腰襦裙',
+            count: '888',
+            delCount: '666'
+        }, {
+            image: '/img/home/spu5.jpg',
+            title: '汉服女原创春夏',
+            describe: '异志阁 原创情侣重工汉服[玉鸾•梵翎秋冬交领襦裙一片式齐腰襦裙',
+            count: '888',
+            delCount: '666'
+        }, {
+            image: '/img/home/spu6.jpg',
+            title: '汉服女原创春夏',
+            describe: '异志阁 原创情侣重工汉服[玉鸾•梵翎秋冬交领襦裙一片式齐腰襦裙',
+            count: '888',
+            delCount: '666'
+        }],
+        // banner轮播图
         swiperList: [{
             id: 0,
-            src: '/img/home/banner1.jpg'
+            src: '/img/home/banner2.jpg'
         }, {
             id: 1,
-            src: '/img/home/banner2.jpg'
+            src: '/img/home/banner1.jpg'
         }, {
             id: 2,
             src: '/img/home/banner3.jpg'
@@ -37,6 +76,48 @@ Page({ //其实page就是一个对象，里面包含属性和方法
             id: 4,
             src: '/img/home/banner5.jpg'
         }, ],
+        // 宫格
+        grids: [{
+                src: 'https://tangzhe123-com.oss-cn-shenzhen.aliyuncs.com/public/1.png',
+                title: '新品发布'
+            },
+            {
+                src: 'https://tangzhe123-com.oss-cn-shenzhen.aliyuncs.com/public/2.png',
+                title: '商城众筹'
+            },
+            {
+                src: 'https://tangzhe123-com.oss-cn-shenzhen.aliyuncs.com/public/3.png',
+                title: '以旧换新'
+            },
+            {
+                src: 'https://tangzhe123-com.oss-cn-shenzhen.aliyuncs.com/public/4.png',
+                title: '一分换团'
+            },
+            {
+                src: 'https://tangzhe123-com.oss-cn-shenzhen.aliyuncs.com/public/5.png',
+                title: '超值特卖'
+            },
+            {
+                src: 'https://tangzhe123-com.oss-cn-shenzhen.aliyuncs.com/public/6.png',
+                title: '商城秒杀'
+            },
+            {
+                src: 'https://tangzhe123-com.oss-cn-shenzhen.aliyuncs.com/public/7.png',
+                title: '真心想要'
+            },
+            {
+                src: 'https://tangzhe123-com.oss-cn-shenzhen.aliyuncs.com/public/8.png',
+                title: '电视热卖'
+            },
+            {
+                src: 'https://tangzhe123-com.oss-cn-shenzhen.aliyuncs.com/public/9.png',
+                title: '家电热卖'
+            },
+            {
+                src: 'https://tangzhe123-com.oss-cn-shenzhen.aliyuncs.com/public/10.png',
+                title: '其他选项'
+            },
+        ],
         themeA: null, //null也是一个Object，先标记起来
         themeE: null,
         themeF: null,
@@ -54,6 +135,9 @@ Page({ //其实page就是一个对象，里面包含属性和方法
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
+        wx.lin.renderWaterFlow(this.data.demo, false, () => {
+            console.log('渲染成功')
+        })
         /**
          *文档中写的wx.request是一个object是一个对象
          * Object.url等等

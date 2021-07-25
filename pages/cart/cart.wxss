@@ -1,1 +1,5 @@
 /* pages/cart/cart.wxss */
+.card {
+    margin-left: auto !important;
+    width: 80% !important;
+}

@@ -1,20 +1,55 @@
 <!-- 通过sticky属性可以开启粘性布局，粘性布局下，当 Tab 滚动到顶部时会自动吸顶。 -->
-<van-tabs swipeable title-active-color="#ee0a24" lazy-render line-height="0px">
+<van-tabs animated duration="0.5" swipeable title-active-color="#ee0a24" lazy-render line-height="0px">
     <van-tab title="推荐">
+        <!-- 如有需要可以使用动态组件 -->
+        <!-- <template is="msgItem" data="{{...item}}"/> -->
+        <!-- banner轮播图 -->
+        <swiper style="box-sizing:border-box" class="p-1 rounded-lg" indicator-dots="false" indicator-color="rgba(0,0,0,.3)" autoplay="false" current="0" current-item-id="" interval="5000" duration="1000" circular="false" previous-margin="false" next-margin="0px" display-multiple-items="1" skip-hidden-item-layout="false" bindchange="" bindanimationfinish="">
+            <!-- 默认取名为item和index,如果要自定义key呢 -->
+            <block wx:for="{{swiperList}}" wx:key="index">
+                <swiper-item class="w-100 rounded-lg" item-id="">
+                    <image class="w-100 rounded-lg" style="height:100%" src="{{item.src}}" mode="aspectFill" lazy-load="false" binderror="" bindload=""></image>
+                </swiper-item>
+            </block>
+        </swiper>
+        <!-- 分类宫格 -->
+        <!-- 外部样式类为何不起作用????? -->
+        <van-grid icon-size="35px" custom-class="grid" column-num="5" border="{{false}}">
+            <!-- 微信小程序如果要循环渲染组件的时候，最好采用block渲染，这样子才能在循环体内拿到item了 -->
+            <block wx:for="{{grids}}">
+                <van-grid-item text-class="grid-item-text" content-class="grid-content" icon="{{item.src}}" text="{{item.title}}" />
+            </block>
+        </van-grid>
+        <!-- 中央广告位 -->
+        <view style="box-sizing:border-box;height: 500rpx;" class="mx-1 my-2 rounded-lg flex flex-wrap" hover-class="none" hover-stop-propagation="false">
+            <image src="/img/home/ad1.jpg" mode="aspectFill" class="rounded-lg mb-auto mr-auto" style="height:47%;width:49%;box-sizing:border-box;"></image>
+            <image src="/img/home/ad2.jpg" mode="aspectFill" class="rounded-lg mb-auto" style="height:47%;width:49%;box-sizing:border-box;"></image>
+            <image src="/img/home/ad3.jpg" mode="aspectFill" class="rounded-lg mr-auto" style="height:47%;width:49%;box-sizing:border-box;"></image>
+            <image src="/img/home/ad4.jpg" mode="aspectFill" class="rounded-lg" style="height:47%;width:49%;box-sizing:border-box;"></image>
+        </view>
+        <!-- 瀑布流 -->
+        <view class="text-center px-2 pb-1 font text-muted">**为您推荐**</view>
+        <view class="p-1">
+            <l-water-flow generic:l-water-flow-item="water-fall-item" />
+        </view>
+    </van-tab>
+    <van-tab title="手机">
         <swiper style="box-sizing:border-box" class="w-100 p-1 rounded-lg" indicator-dots="false" indicator-color="rgba(0,0,0,.3)" autoplay="false" current="0" current-item-id="" interval="5000" duration="1000" circular="false" previous-margin="false" next-margin="0px" display-multiple-items="1" skip-hidden-item-layout="false" bindchange="" bindanimationfinish="">
-            <!-- 默认取名为item和index -->
-            <block wx:for="{{swiperList}}" wx:key="{{item.id}}">
+            <!-- 默认取名为item和index,如果要自定义key呢 -->
+            <block wx:for="{{swiperList}}" wx:key="index">
                 <swiper-item class="w-100 rounded-lg" item-id="">
                     <image class="w-100 rounded-lg" style="height:100%" src="{{item.src}}" mode="aspectFill" lazy-load="false" binderror="" bindload=""></image>
                 </swiper-item>
             </block>
         </swiper>
         <!-- 外部样式类为何不起作用????? -->
-        <van-grid custom-class="grid" column-num="5">
-            <van-grid-item icon="photo-o" text="文字" wx:for="{{ 10 }}" />
+        <van-grid custom-class="grid" column-num="5" border="{{false}}">
+            <!-- 微信小程序如果要循环渲染组件的时候，最好采用block渲染，这样子才能在循环体内拿到item了 -->
+            <block wx:for="{{grids}}">
+                <van-grid-item content-class="grid-content" icon="{{item.src}}" text="{{item.title}}" />
+            </block>
         </van-grid>
     </van-tab>
-    <van-tab title="手机">内容 2</van-tab>
     <van-tab title="智能">内容 3</van-tab>
     <van-tab title="电视">内容 4</van-tab>
     <van-tab title="笔记本">内容 5</van-tab>

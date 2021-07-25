@@ -1,1 +1,8 @@
 /* pages/category/category.wxss */
+.grid-item {
+    height: 180rpx !important;
+}
+.grid-item-text{
+    margin-top: auto !important;
+    font-size: 27rpx !important;
+}

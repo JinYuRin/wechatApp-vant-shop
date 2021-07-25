@@ -62,7 +62,16 @@ rpx关闭语法检查
     margin-bottom: 38rpx;
 }
 
-/*lets encrypt 获取https*/
+/* 外部样式类不起作用的话需要尝试使用!important */
 .grid {
-    margin: 10rpx 10rpx;
+    margin: 10rpx 10rpx !important;
+}
+
+.grid-content {
+    padding: 16rpx 0 !important;
+}
+
+.grid-item-text {
+    font-size: 26rpx !important;
+    color: #A9A5A0;
 }

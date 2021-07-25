@@ -21,6 +21,7 @@
     "l-grid-item": "/miniprogram_npm/lin-ui/grid-item/index",
     "s-spu-preview": "/components/spu-preview/index",
     "l-price": "/miniprogram_npm/lin-ui/price/index",
+    "l-card": "/miniprogram_npm/lin-ui/card/index",
     "l-counter": "/miniprogram_npm/lin-ui/counter/index",
     "s-counter": "/components/counter/index",
     "l-tag": "/miniprogram_npm/lin-ui/tag/index",
@@ -58,12 +59,5 @@
         "selectedIconPath": "img/tabbar/my.png"
       }
     ]
-  },
-  "setting": {
-    "packNpmManually": true,
-    "packNpmRelationList": [{
-      "packageJsonPath": "./package.json",
-      "miniprogramNpmDistDir": "./miniprogram/"
-    }]
   }
 }
