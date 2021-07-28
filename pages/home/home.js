@@ -23,37 +23,37 @@ Page({ //其实page就是一个对象，里面包含属性和方法
     data: {
         // 
         demo: [{
-            image: '/img/home/spu1.jpg',
+            image: 'http://lencent.top/public/wanxiang/home/spu1.jpg',
             title: '显瘦中长款系带风衣',
             describe: '柔软顺滑、上身挺括显瘦，垂坠飘逸、不易皱好打理。',
             count: '888',
             delCount: '666'
         }, {
-            image: '/img/home/spu2.jpg',
+            image: 'http://lencent.top/public/wanxiang/home/spu2.jpg',
             title: '汉服女原创春夏',
             describe: '异志阁 原创情侣重工汉服[玉鸾•梵翎秋冬交领襦裙一片式齐腰襦裙',
             count: '888',
             delCount: '666'
         }, {
-            image: '/img/home/spu3.jpg',
+            image: 'http://lencent.top/public/wanxiang/home/spu3.jpg',
             title: '汉服女原创春夏',
             describe: '柔软顺滑垂坠飘逸。',
             count: '888',
             delCount: '666'
         }, {
-            image: '/img/home/spu4.jpg',
+            image: 'http://lencent.top/public/wanxiang/home/spu4.jpg',
             title: '汉服女原创春夏',
             describe: '异志阁 原创情侣重工汉服[玉鸾•梵翎秋冬交领襦裙一片式齐腰襦裙',
             count: '888',
             delCount: '666'
         }, {
-            image: '/img/home/spu5.jpg',
+            image: 'http://lencent.top/public/wanxiang/home/spu5.jpg',
             title: '汉服女原创春夏',
             describe: '异志阁 原创情侣重工汉服[玉鸾•梵翎秋冬交领襦裙一片式齐腰襦裙',
             count: '888',
             delCount: '666'
         }, {
-            image: '/img/home/spu6.jpg',
+            image: 'http://lencent.top/public/wanxiang/home/spu6.jpg',
             title: '汉服女原创春夏',
             describe: '异志阁 原创情侣重工汉服[玉鸾•梵翎秋冬交领襦裙一片式齐腰襦裙',
             count: '888',
@@ -62,19 +62,19 @@ Page({ //其实page就是一个对象，里面包含属性和方法
         // banner轮播图
         swiperList: [{
             id: 0,
-            src: '/img/home/banner2.jpg'
+            src: 'http://lencent.top/public/wanxiang/home/banner2.jpg'
         }, {
             id: 1,
-            src: '/img/home/banner1.jpg'
+            src: 'http://lencent.top/public/wanxiang/home/banner1.jpg'
         }, {
             id: 2,
-            src: '/img/home/banner3.jpg'
+            src: 'http://lencent.top/public/wanxiang/home/banner3.jpg'
         }, {
             id: 3,
-            src: '/img/home/banner4.jpg'
+            src: 'http://lencent.top/public/wanxiang/home/banner4.jpg'
         }, {
             id: 4,
-            src: '/img/home/banner5.jpg'
+            src: 'http://lencent.top/public/wanxiang/home/banner5.jpg'
         }, ],
         // 宫格
         grids: [{

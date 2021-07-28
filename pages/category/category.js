@@ -6,19 +6,19 @@ Page({
    */
   data: {
     grids: [{
-        src: '/img/home/cate1.jpg',
+        src: 'http://lencent.top/public/wanxiang/home/cate1.jpg',
         title: '空调'
       },
       {
-        src: '/img/home/cate2.png',
+        src: 'http://lencent.top/public/wanxiang/home/cate2.png',
         title: '手机'
       },
       {
-        src: '/img/home/cate3.jpg',
+        src: 'http://lencent.top/public/wanxiang/home/cate3.jpg',
         title: '加湿器'
       },
       {
-        src: '/img/home/cate3.jpg',
+        src: 'http://lencent.top/public/wanxiang/home/cate3.jpg',
         title: '加湿器'
       }
     ],

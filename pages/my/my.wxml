@@ -1,36 +1,26 @@
 <view>
-    <view class="flex align-center justify-between px-2">
+    <view class="flex align-center justify-between px-3 header" style="">
         <view class="flex align-center">
-            <image class="rounded-circle mr-2" src="/img/user/user.jpg" style="width: 150rpx;height: 150rpx;"></image>
-            <view class="font-lg font-weight-bolder flex-shrink">金鳞</view>
-        </view>
-        <view style="background-color: rgba(0, 0, 0, 0.1);width: 200rpx;height: 70rpx;" class="flex align-center justify-center bg-light rounded-circle font-md font-weight-bolder">
-            <!-- <text class="iconfont icon-bofang mr-1"></text> -->
-            <text class="font-md">我的消息</text>
+            <image class="rounded-circle mr-2" src="/img/user/user.jpg" style="width: 130rpx;height: 130rpx;"></image>
+            <view class="font-md flex-shrink">金鳞</view>
         </view>
     </view>
+    <view class="f-divider" />
     <view class="mt-2">
         <view>
-            <view class="flex align-center justify-between px-2 py-1" hover-class="bg-light">
-                <text class="font-md text-light-muted">设置</text>
-                <!-- <text class="font-lg iconfont icon-iconfonti"></text> -->
+            <view class="flex align-center justify-between p-2 border-bottom">
+                <text class="font">设置</text>
             </view>
-            <view class="f-divider" />
         </view>
         <view>
-            <view class="flex align-center justify-between px-2 py-1" hover-class="bg-light">
-                <text class="font-md text-light-muted">意见反馈</text>
-                <!-- <text class="font-lg iconfont icon-iconfonti"></text> -->
+            <view class="flex align-center justify-between p-2 border-bottom">
+                <text class="font">意见反馈</text>
             </view>
-            <view class="f-divider" />
         </view>
         <view>
-            <!-- bind:tap可以简写成:tap -->
-            <view :tap="toLogin" class="flex align-center justify-between px-2 py-1" hover-class="bg-light">
-                <text class="font-md text-light-muted">切换账号</text>
-                <!-- <text class="font-lg iconfont icon-iconfonti"></text> -->
+            <view :tap="toLogin" class="flex align-center justify-between p-2 border-bottom">
+                <text class="font">切换账号</text>
             </view>
-            <!-- <view class="f-divider" /> -->
         </view>
     </view>
 </view>

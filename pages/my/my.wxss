@@ -1,3 +1,11 @@
+.header {
+    height: 300rpx;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(http://lencent.top/public/uploads/20210720/mine300.jpg)
+}
+
 /* 分割线 */
 .f-divider {
     height: 18rpx;

@@ -1,4 +1,5 @@
 {
+  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -10,14 +11,7 @@
       "list": []
     },
     "miniprogram": {
-      "list": [
-        {
-          "name": "pages/category/category",
-          "pathName": "pages/category/category",
-          "query": "",
-          "scene": null
-        }
-      ]
+      "list": []
     }
   }
 }
