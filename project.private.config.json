@@ -11,7 +11,14 @@
       "list": []
     },
     "miniprogram": {
-      "list": []
+      "list": [
+        {
+          "name": "pages/spu-detail/spu-detail",
+          "pathName": "pages/spu-detail/spu-detail",
+          "query": "",
+          "scene": null
+        }
+      ]
     }
   }
 }

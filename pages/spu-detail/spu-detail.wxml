@@ -1,0 +1,49 @@
+<swiper style="height: 750rpx;" class="w-100" indicator-dots="{{false}}" indicator-color="rgba(0,0,0,.3)" autoplay="{{false}}" current="0" current-item-id="" interval="5000" duration="1000" circular="false" previous-margin="false" next-margin="0px" display-multiple-items="1" skip-hidden-item-layout="false" bindchange="" bindanimationfinish="">
+    <!-- 默认取名为item和index,如果要自定义key呢 -->
+    <block wx:for="{{swiperList}}" wx:key="index">
+        <swiper-item class="w-100" item-id="" style="height:100%">
+            <image class="w-100" style="height:100%" src="{{item.src}}" mode="aspectFill" lazy-load="false" binderror="" bindload=""></image>
+        </swiper-item>
+    </block>
+</swiper>
+<view class="bg-white p-3 rounded-bottom-lg-my" hover-class="none" hover-stop-propagation="false">
+    <view class="bg-white flex justify-between align-center" style="line-height: 20px;" hover-class="none" hover-stop-propagation="false">
+        <view class="flex" hover-class="none" hover-stop-propagation="false">
+            <view class="font-lg" style="font-size: 50rpx; font-weight: 700;color: #ee0a24;" hover-class="none" hover-stop-propagation="false">
+                <text class="font">¥</text>
+                <text class="">208</text>
+                <text>.00</text>
+            </view>
+            <view class="font-sm" style="line-height:2.3; margin-left: 5px;text-decoration: line-through; color: #646566;" hover-class="none" hover-stop-propagation="false">
+                ¥ 308.00
+            </view>
+        </view>
+        <view class="flex flex-column justify-center align-center" hover-class="none" hover-stop-propagation="false">
+            <van-icon name="like-o" />
+            <view class="font-sm text-muted" hover-class="none" hover-stop-propagation="false">
+                收藏
+            </view>
+        </view>
+    </view>
+    <view class="font-weight-bold h4" style="line-height: 25px !important;" hover-class="none" hover-stop-propagation="false">
+        卡辑汉服女仙气古装齐腰原创齐胸襦裙成人古风女生六米学生夏季薄款 含娇齐腰汉服3米（上襦+吊带+下裙+大袖衫） M
+    </view>
+    <view class="font-sm mt-3 text-light-muted" hover-class="none" hover-stop-propagation="false">
+        采用优质面料，可对比同行质量，品质保证，赠送运费险，多款供选择！并赠送古扇，发带，眉心贴哦其他热销款
+    </view>
+</view>
+<view class="w-100 mt-3" hover-class="none" hover-stop-propagation="false">
+    <image class="w-100" style="height:1000rpx" src="http://lencent.top/public/wanxiang/spu-detail/2.jpg" mode="aspectFill" lazy-load="{{true}}" binderror="" bindload=""></image>
+    <image class="w-100" style="height:1000rpx" src="http://lencent.top/public/wanxiang/spu-detail/3.jpg" mode="aspectFill" lazy-load="{{true}}" binderror="" bindload=""></image>
+    <image class="w-100" style="height:1000rpx" src="http://lencent.top/public/wanxiang/spu-detail/4.jpg" mode="aspectFill" lazy-load="{{true}}" binderror="" bindload=""></image>
+    <image class="w-100" style="height:1000rpx" src="http://lencent.top/public/wanxiang/spu-detail/5.jpg" mode="aspectFill" lazy-load="{{true}}" binderror="" bindload=""></image>
+    <image class="w-100" style="height:1000rpx" src="http://lencent.top/public/wanxiang/spu-detail/6.jpg" mode="aspectFill" lazy-load="{{true}}" binderror="" bindload=""></image>
+    <image class="w-100" style="height:1000rpx" src="http://lencent.top/public/wanxiang/spu-detail/7.jpg" mode="aspectFill" lazy-load="{{true}}" binderror="" bindload=""></image>
+</view>
+<van-goods-action>
+    <van-goods-action-icon icon="shop-o" text="店铺" bind:click="onClickIcon" />
+    <van-goods-action-icon icon="chat-o" text="客服" bind:click="onClickIcon" />
+    <van-goods-action-icon icon="cart-o" text="购物车" bind:click="onClickIcon" />
+    <van-goods-action-button text="加入购物车" type="warning" bind:click="onClickButton" />
+    <van-goods-action-button text="立即购买" bind:click="onClickButton" />
+</van-goods-action>

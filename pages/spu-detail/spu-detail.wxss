@@ -1,0 +1,8 @@
+page {
+    background-color: #f8f9fa;
+}
+
+.rounded-bottom-lg-my {
+    border-bottom-right-radius: 50rpx;
+    border-bottom-left-radius: 50rpx;
+}

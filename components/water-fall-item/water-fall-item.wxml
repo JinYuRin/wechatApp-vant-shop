@@ -1,4 +1,4 @@
-<l-card full type="cover" image="{{data.image}}" title="{{data.title}}" l-class="life-container" l-img-class="life-img" l-title-class="life-title" bindtap="onProduct">
+<l-card full type="cover" image="{{data.image}}" title="{{data.title}}" l-class="life-container" l-img-class="life-img" l-title-class="life-title" bindtap="toSpuDetail">
   <view class='life-product-contianer'>
     <view class='art-content'>{{data.describe}}</view>
     <view class='price-container'>

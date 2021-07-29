@@ -4,7 +4,8 @@
     "pages/detail/detail",
     "pages/cart/cart",
     "pages/category/category",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/spu-detail/spu-detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -15,6 +16,7 @@
   },
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
+    "van-icon": "/miniprogram_npm/@vant/weapp/icon/index",
     "van-row": "/miniprogram_npm/@vant/weapp/row/index",
     "van-col": "/miniprogram_npm/@vant/weapp/col/index",
     "l-grid": "/miniprogram_npm/lin-ui/grid/index",

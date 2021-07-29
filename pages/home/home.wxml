@@ -1,6 +1,9 @@
 <!-- 通过sticky属性可以开启粘性布局，粘性布局下，当 Tab 滚动到顶部时会自动吸顶。 -->
 <van-tabs animated="{{true}}" duration="0.3" lazy-render swipeable title-active-color="#ee0a24" line-height="0px">
     <van-tab title="推荐">
+        <!-- <view bind:tap="tap" class="" hover-class="none" hover-stop-propagation="false">
+            bind:tap="tap" 或者 bindtap="tap" 这是原生的小程序事件，可以加在所有组件上
+        </view> -->
         <!-- 如有需要可以使用动态组件 -->
         <!-- <template is="msgItem" data="{{...item}}"/> -->
         <!-- banner轮播图 -->
@@ -30,7 +33,7 @@
         <!-- 瀑布流 -->
         <view class="text-center px-2 pb-1 font text-muted">**为您推荐**</view>
         <view class="p-1">
-            <l-water-flow generic:l-water-flow-item="water-fall-item" />
+            <l-water-flow bind:toSpuDetail="toSpuDetail" generic:l-water-flow-item="water-fall-item" />
         </view>
     </van-tab>
     <van-tab title="手机">
