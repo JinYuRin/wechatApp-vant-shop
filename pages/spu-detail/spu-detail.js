@@ -1,5 +1,11 @@
 Page({
+    change(e) {
+        this.setData({
+            currentSwiper: e.detail.current + 1
+        })
+    },
     data: {
+        currentSwiper: 1,
         // banner轮播图
         swiperList: [{
             id: 0,
@@ -16,7 +22,7 @@ Page({
         }, {
             id: 4,
             src: 'http://lencent.top/public/wanxiang/spu-detail/5.jpg'
-        },{
+        }, {
             id: 5,
             src: 'http://lencent.top/public/wanxiang/spu-detail/6.jpg'
         }, ],

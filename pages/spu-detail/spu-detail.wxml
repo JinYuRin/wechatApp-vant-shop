@@ -1,11 +1,16 @@
-<swiper style="height: 750rpx;" class="w-100" indicator-dots="{{false}}" indicator-color="rgba(0,0,0,.3)" autoplay="{{false}}" current="0" current-item-id="" interval="5000" duration="1000" circular="false" previous-margin="false" next-margin="0px" display-multiple-items="1" skip-hidden-item-layout="false" bindchange="" bindanimationfinish="">
-    <!-- 默认取名为item和index,如果要自定义key呢 -->
-    <block wx:for="{{swiperList}}" wx:key="index">
-        <swiper-item class="w-100" item-id="" style="height:100%">
-            <image class="w-100" style="height:100%" src="{{item.src}}" mode="aspectFill" lazy-load="false" binderror="" bindload=""></image>
-        </swiper-item>
-    </block>
-</swiper>
+<view class="position-relative w-100" hover-class="none" hover-stop-propagation="false">
+    <swiper style="height: 750rpx;" class="w-100" indicator-dots="{{false}}" indicator-color="rgba(0,0,0,.3)" autoplay="{{false}}" current="0" current-item-id="" interval="5000" duration="1000" circular="false" previous-margin="false" next-margin="0px" display-multiple-items="1" skip-hidden-item-layout="false" bindchange="change" bindanimationfinish="">
+        <!-- 默认取名为item和index,如果要自定义key呢 -->
+        <block wx:for="{{swiperList}}" wx:key="index">
+            <swiper-item class="w-100" item-id="" style="height:100%">
+                <image class="w-100" style="height:100%" src="{{item.src}}" mode="aspectFill" lazy-load="false" binderror="" bindload=""></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="position-absolute text-center rounded-left-lg-my text-white font" style="width:10%; bottom:25rpx;right:0;background:rgba(0,0,0,.2);" hover-class="none" hover-stop-propagation="false">
+        {{currentSwiper}}/{{6}}
+    </view>
+</view>
 <view class="bg-white p-3 rounded-bottom-lg-my" hover-class="none" hover-stop-propagation="false">
     <view class="bg-white flex justify-between align-center" style="line-height: 20px;" hover-class="none" hover-stop-propagation="false">
         <view class="flex" hover-class="none" hover-stop-propagation="false">

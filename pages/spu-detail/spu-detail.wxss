@@ -6,3 +6,8 @@ page {
     border-bottom-right-radius: 50rpx;
     border-bottom-left-radius: 50rpx;
 }
+
+.rounded-left-lg-my {
+    border-top-left-radius: 50rpx;
+    border-bottom-left-radius: 50rpx;
+}
