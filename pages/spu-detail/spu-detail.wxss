@@ -1,5 +1,5 @@
 page {
-    background-color: #f8f9fa;
+    background-color: #f2f2f2;
 }
 
 .rounded-bottom-lg-my {
@@ -10,4 +10,40 @@ page {
 .rounded-left-lg-my {
     border-top-left-radius: 50rpx;
     border-bottom-left-radius: 50rpx;
+}
+
+.rounded-lg-my {
+    border-radius: 30rpx;
+}
+.rounded-bottom-lg-my {
+    border-bottom-right-radius: 30rpx;
+    border-bottom-left-radius: 30rpx;
+  }
+
+.coupon:before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    box-sizing: border-box;
+    left: -1px;
+    width: 8rpx;
+    height: 10rpx;
+    background-color: #fff;
+    border-radius: 0 8rpx 8rpx 0;
+    border: 1px solid #ff8373;
+    border-left: none
+}
+
+.coupon:after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    box-sizing: border-box;
+    right: -1px;
+    width: 8rpx;
+    height: 10rpx;
+    background-color: #fff;
+    border-radius: 8rpx 0 0 8rpx;
+    border: 1px solid #ff8373;
+    border-right: none;
 }

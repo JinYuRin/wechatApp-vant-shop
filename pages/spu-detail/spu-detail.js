@@ -1,10 +1,37 @@
 Page({
+    openActionSheet() {
+        this.setData({
+            show: true
+        });
+    },
     change(e) {
         this.setData({
             currentSwiper: e.detail.current + 1
         })
     },
+    onClose() {
+        this.setData({
+            show: false
+        });
+    },
+
+    onSelect(event) {
+        console.log(event.detail);
+    },
     data: {
+        show: false,
+        actions: [{
+                name: '选项',
+            },
+            {
+                name: '选项',
+            },
+            {
+                name: '选项',
+                subname: '描述信息',
+                openType: 'share',
+            },
+        ],
         currentSwiper: 1,
         // banner轮播图
         swiperList: [{

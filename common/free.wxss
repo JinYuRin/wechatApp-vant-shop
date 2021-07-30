@@ -249,6 +249,7 @@
 .text-left { text-align: left;}
 .text-right { text-align: right;}
 .text-center { text-align: center;}
+.text-end { text-align: end;}
 /* 文字换行溢出处理 */
 .text-ellipsis {
 	/* #ifndef APP-PLUS-NVUE */
