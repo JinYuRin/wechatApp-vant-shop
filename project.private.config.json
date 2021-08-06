@@ -17,6 +17,12 @@
           "pathName": "pages/spu-detail/spu-detail",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/category/category",
+          "pathName": "pages/category/category",
+          "query": "",
+          "scene": null
         }
       ]
     }

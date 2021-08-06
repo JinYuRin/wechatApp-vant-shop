@@ -8,7 +8,7 @@
         </block>
     </swiper>
     <view class="position-absolute text-center rounded-left-lg-my text-white font" style="width:10%; bottom:25rpx;right:0;background:rgba(0,0,0,.2);">
-        {{currentSwiper}}/{{6}}
+        {{currentSwiper}}/{{swiperList.length}}
     </view>
 </view>
 <view class="bg-white p-3 rounded-bottom-lg-my">
@@ -115,7 +115,7 @@
 </view>
 <!-- 详情图模块/规格参数/售后保障 -->
 <!-- 死心吧，小程序没有动态组件的功能 -->
-<view class="w-100">
+<view class="w-100" style="padding-bottom: 150rpx;" >
     <image class="w-100" style="height:1000rpx" src="http://lencent.top/public/wanxiang/spu-detail/2.jpg" mode="aspectFill" lazy-load="{{true}}" binderror="" bindload=""></image>
     <image class="w-100" style="height:1000rpx" src="http://lencent.top/public/wanxiang/spu-detail/3.jpg" mode="aspectFill" lazy-load="{{true}}" binderror="" bindload=""></image>
     <image class="w-100" style="height:1000rpx" src="http://lencent.top/public/wanxiang/spu-detail/4.jpg" mode="aspectFill" lazy-load="{{true}}" binderror="" bindload=""></image>
