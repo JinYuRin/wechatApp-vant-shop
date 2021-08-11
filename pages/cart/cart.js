@@ -5,7 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
+    checked: true,
+    imageURL: '/img/cart-1.jpg'
+  },
 
+  onChange(event) {
+    this.setData({
+      checked: event.detail,
+    });
   },
 
   /**
