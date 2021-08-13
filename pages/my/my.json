@@ -1,5 +1,8 @@
 {
   "usingComponents": {
-    "van-card": "@vant/weapp/card/index"
+    "van-card": "@vant/weapp/card/index",
+    "van-image": "/miniprogram_npm/@vant/weapp/image/index",
+    "van-grid": "/miniprogram_npm/@vant/weapp/grid/index",
+    "van-grid-item": "/miniprogram_npm/@vant/weapp/grid-item/index"
   }
 }

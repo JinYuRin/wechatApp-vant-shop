@@ -5,7 +5,44 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    list1: [{
+      icon: 'star-o',
+      text: '收藏',
+      id: 0
+    }, {
+      icon: 'shop-collect-o',
+      text: '订阅商品',
+      id: 1
+    }, {
+      icon: 'underway-o',
+      text: '足迹',
+      id: 2
+    }, {
+      icon: 'pending-payment',
+      text: '零钱',
+      id: 3
+    }, ],
+    list2: [{
+      icon: 'credit-pay',
+      text: '待付款',
+      id: 0
+    }, {
+      icon: 'send-gift-o',
+      text: '待发货',
+      id: 1
+    }, {
+      icon: 'logistics',
+      text: '待收货',
+      id: 2
+    }, {
+      icon: 'comment-circle-o',
+      text: '待评价',
+      id: 3
+    }, {
+      icon: 'after-sale',
+      text: '退款/售后',
+      id: 4
+    }, ]
   },
 
   /**

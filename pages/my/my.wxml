@@ -1,4 +1,4 @@
-<view>
+<!-- <view>
     <view class="flex align-center justify-between px-3 header" style="">
         <view class="flex align-center">
             <image class="rounded-circle mr-2" src="/img/user/user.jpg" style="width: 130rpx;height: 130rpx;"></image>
@@ -23,4 +23,34 @@
             </view>
         </view>
     </view>
+</view> -->
+<view class="page px-4 pt-5">
+    <view class="header flex align-center">
+        <van-image round width="130rpx" height="130rpx" src="http://lencent.top/public/lilong/avatar.jpg" />
+        <view class="header-right ml-5 flex flex-column justify-between">
+            <view class="font-md">就是瑾瑜啊</view>
+            <view class="font-sm text-light-muted">点这里可以添加个性签名。</view>
+            <view class="font-sm text-muted">
+                <text>关注0</text>
+                <text class="mx-2">|</text>
+                <text>粉丝0</text>
+            </view>
+        </view>
+    </view>
+    <!-- 关于index的值的获取，一个简单思路就是在wxml中把data-key的值设为{{index}}，在js文件中通过currentTarget.dataset.key就可以获取到了。具体的可以参阅官方文档中框架——事件——target的说明。 -->
+    <van-grid border="{{false}}" custom-class="grid" column-num="4">
+        <van-grid-item info="{{1}}" content-class="grid-item-content" wx:for-item="cate" wx:key="id" icon="{{cate.icon}}" text="{{cate.text}}" wx:for="{{ list1 }}" />
+    </van-grid>
+</view>
+<view class="mx-1 p-2 bg-white rounded-lg-my mb-3">
+    <view class="flex align-center justify-between mb-2">
+        <view class="font-sm font-weight-bold">我的订单</view>
+        <view class="font-sm text-light-muted">
+            全部
+            <van-icon name="arrow" />
+        </view>
+    </view>
+    <van-grid border="{{false}}" custom-class="grid" column-num="5">
+        <van-grid-item info="{{1}}" content-class="grid-item-content2" wx:for-item="cate" wx:key="id" icon="{{cate.icon}}" text="{{cate.text}}" wx:for="{{ list2 }}" />
+    </van-grid>
 </view>

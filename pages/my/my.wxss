@@ -1,10 +1,43 @@
+page {
+    background-color: #f2f2f2;
+}
+
+.header {
+    height: 130rpx;
+}
+
+.header-right {
+    height: 100%;
+}
+
+.grid {
+    /* margin: 10rpx 0 !important; */
+}
+
+.grid-item-content {
+    background-color: #f2f2f2 !important;
+}
+
+.grid-item-content2 {
+    padding-top: 15rpx !important;
+    padding-bottom: 0 !important;
+    padding-left: 5rpx !important;
+    padding-right: 5rpx !important;
+}
+
+.rounded-lg-my {
+    border-radius: 30rpx;
+}
+
+/* 
+
 .header {
     height: 300rpx;
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(http://lencent.top/public/uploads/20210720/mine300.jpg)
-}
+} */
 
 /* 分割线 */
 .f-divider {
