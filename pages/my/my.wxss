@@ -10,9 +10,9 @@ page {
     height: 100%;
 }
 
-.grid {
-    /* margin: 10rpx 0 !important; */
-}
+/* .grid {
+    margin: 10rpx 0 !important;
+} */
 
 .grid-item-content {
     background-color: #f2f2f2 !important;
