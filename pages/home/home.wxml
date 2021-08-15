@@ -7,7 +7,7 @@
         <!-- 如有需要可以使用动态组件 -->
         <!-- <template is="msgItem" data="{{...item}}"/> -->
         <!-- banner轮播图 -->
-        <swiper style="box-sizing:border-box" class="p-1 rounded-lg" indicator-dots="false" indicator-color="rgba(0,0,0,.3)" autoplay="false" current="0" current-item-id="" interval="5000" duration="1000" circular="false" previous-margin="false" next-margin="0px" display-multiple-items="1" skip-hidden-item-layout="false" bindchange="" bindanimationfinish="">
+        <swiper style="box-sizing:border-box" class="p-1 pt-0 rounded-lg" indicator-dots="false" indicator-color="rgba(0,0,0,.3)" autoplay="false" current="0" current-item-id="" interval="5000" duration="1000" circular="false" previous-margin="false" next-margin="0px" display-multiple-items="1" skip-hidden-item-layout="false" bindchange="" bindanimationfinish="">
             <!-- 默认取名为item和index,如果要自定义key呢 -->
             <block wx:for="{{swiperList}}" wx:key="index">
                 <swiper-item class="w-100 rounded-lg" item-id="">
@@ -33,7 +33,7 @@
         <!-- 瀑布流 -->
         <view class="text-center px-2 pb-1 font text-muted">**为您推荐**</view>
         <view class="p-1">
-            <l-water-flow bind:toSpuDetail="toSpuDetail" generic:l-water-flow-item="water-fall-item" />
+            <l-water-flow bind:toSpuDetail="toSpuDetail" column-gap="10rpx" generic:l-water-flow-item="water-fall-item" />
         </view>
     </van-tab>
     <van-tab title="手机">

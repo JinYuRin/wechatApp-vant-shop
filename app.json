@@ -5,7 +5,8 @@
     "pages/cart/cart",
     "pages/category/category",
     "pages/my/my",
-    "pages/spu-detail/spu-detail"
+    "pages/spu-detail/spu-detail",
+    "pages/spu-filter/spu-filter"
   ],
   "window": {
     "backgroundTextStyle": "light",

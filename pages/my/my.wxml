@@ -44,8 +44,8 @@
 </view>
 <view class="mx-1 p-2 bg-white rounded-lg-my mb-3">
     <view class="flex align-center justify-between mb-2">
-        <view class="font-sm font-weight-bold">我的订单</view>
-        <view class="font-sm text-light-muted">
+        <view class="font font-weight-bold">我的订单</view>
+        <view class="font text-light-muted">
             全部
             <van-icon name="arrow" />
         </view>
@@ -53,4 +53,5 @@
     <van-grid border="{{false}}" custom-class="grid" column-num="5">
         <van-grid-item info="{{1}}" content-class="grid-item-content2" wx:for-item="cate" wx:key="id" icon="{{cate.icon}}" text="{{cate.text}}" wx:for="{{ list2 }}" />
     </van-grid>
+    
 </view>

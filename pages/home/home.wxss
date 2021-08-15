@@ -5,6 +5,9 @@ rpx关闭语法检查
 /*.container{*/
 /*    background-color: #000000;*/
 /*}*/
+page {
+    background-color: #f2f2f2;
+}
 
 .top-theme {
     width: 100%;
@@ -68,6 +71,7 @@ rpx关闭语法检查
 }
 
 .grid-content {
+    background-color: #f2f2f2 !important;
     padding: 16rpx 0 !important;
 }
 

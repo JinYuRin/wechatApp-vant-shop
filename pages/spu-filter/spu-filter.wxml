@@ -1,0 +1,2 @@
+<view class="" style="{{'height:'+statusBarHeight+'px'}}" />
+<van-nav-bar custom-class="nav-bar" title="标题" left-arrow bind:click-left="onClickLeft" bind:click-right="onClickRight" />

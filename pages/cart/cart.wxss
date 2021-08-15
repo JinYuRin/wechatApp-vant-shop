@@ -3,6 +3,10 @@ page {
     background-color: #f2f2f2;
 }
 
+.cart-wrapper {
+    margin-bottom: 130rpx;
+}
+
 .checkbox__shop {
     margin-bottom: 10rpx !important;
 }
@@ -46,6 +50,12 @@ page {
 .tag {
     color: #f2270c;
 }
+
 .rounded-lg-my {
     border-radius: 30rpx;
+}
+
+.card-title {
+    font-size: 30rpx;
+    font-weight: normal !important;
 }

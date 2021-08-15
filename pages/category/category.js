@@ -23,6 +23,12 @@ Page({
       }
     ],
   },
+  // 进入商品过滤页面
+  toSpuFilter() {
+    wx.navigateTo({
+      url: '/pages/spu-filter/spu-filter'
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载

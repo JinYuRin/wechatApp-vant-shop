@@ -25,6 +25,11 @@ page {
     padding-right: 5rpx !important;
 }
 
+
+.van-grid-item .van-grid-item__text {
+    margin-top: 5rpx !important;
+}
+
 .rounded-lg-my {
     border-radius: 30rpx;
 }

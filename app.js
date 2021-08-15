@@ -9,6 +9,24 @@ App({
         logs.unshift(Date.now())
         wx.setStorageSync('logs', logs)
 
+        // 利用本地存储能力模拟获取后台数据
+        let cartList = wx.getStorageSync('cartList') || []
+        if (!cartList.length) {
+            cartList = [{
+                shopName: '卡辑旗舰店',
+                hasCoupon: true,
+                goods: [{
+                    name: '卡辑汉服女仙气古装齐腰原创齐胸襦裙成人古风女生六米学生夏季薄款 含娇齐腰汉服3米（上襦+吊带+下裙+大袖衫） M',
+                    desc: '含娇齐腰汉服3米（上襦+吊带+下裙+大袖衫），M',
+                    img: './img/cart-1.jpg',
+                    tags: ['白条3期免息'],
+                    price: 198.00,
+                    count: 1
+                }]
+            }]
+            wx.setStorageSync('cartList', cartList)
+        }
+
         // 登录
         wx.login({
             success: res => {

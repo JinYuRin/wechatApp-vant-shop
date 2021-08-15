@@ -24,7 +24,7 @@
             <view class="font font-weight-bold">热门分类</view>
             <van-grid icon-size="50px" custom-class="grid" column-num="3" border="{{false}}">
                 <block wx:for="{{grids}}">
-                    <van-grid-item custom-class="grid-item" text-class="grid-item-text" content-class="grid-content" icon="{{item.src}}" text="{{item.title}}" />
+                    <van-grid-item bind:click="toSpuFilter" custom-class="grid-item" text-class="grid-item-text" content-class="grid-content" icon="{{item.src}}" text="{{item.title}}" />
                 </block>
             </van-grid>
         </view>
