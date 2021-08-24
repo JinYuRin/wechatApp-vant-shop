@@ -1,5 +1,6 @@
 <view class="cart-wrapper">
-    <block wx:for="{{cartList}}" wx:for-item="shop" wx:key="index">
+    <!-- 循环渲染每个店铺的购物车信息 item取名shop -->
+    <block wx:for="{{cartList}}" wx:for-item="shop" wx:for-index="shopId" wx:key="shopId">
         <view class="px-4 py-3 bg-white rounded-lg-my mb-3">
             <van-checkbox custom-class="checkbox__shop" value="{{ checked }}" bind:change="onChange">
                 <view class="flex justify-between" style="width:610rpx">
@@ -14,19 +15,21 @@
                 </view>
             </van-checkbox>
             <!-- 需要选用复选框组 -->
-            <block wx:for="{{shop.goods}}" wx:key="index">
+            <!-- 循环渲染每个购物车的商品信息 -->
+            <block wx:for="{{shop.goods}}" wx:for-item="good" wx:for-index="shopId" wx:key="goodId">
                 <!-- 玛德莫名其妙的不能使用num插槽,这个破烂UI -->
-                <van-checkbox label-disabled="{{true}}" title-class="card-title" custom-class="checkbox__card" value="{{ checked }}" bind:change="onChange">
+                <van-checkbox data-info="{{[shopId,shopId]}}" label-disabled="{{true}}" title-class="card-title" custom-class="checkbox__card"
+                value="{{ good.checked }}" bind:change="checkedItem">
                     <view style="width:610rpx">
                         <!-- 价格应该补两位的 -->
-                        <van-card price="{{item.price}}" title="{{item.name}}" thumb="{{ imageURL }}" custom-class="card" title-class="card-title" price-class="card-price" thumb-class="card-thumb">
+                        <van-card price="{{good.price}}" title="{{good.name}}" thumb="{{ imageURL }}" custom-class="card" title-class="card-title" price-class="card-price" thumb-class="card-thumb">
                             <view slot="desc" class="card-desc rounded-lg text-ellipsis">
-                                {{item.desc}}
+                                {{good.desc}}
                             </view>
-                            <view slot="tags" class="mb-2">
-                                <text wx:for="{{item.tags}}" wx:for-item="tag" class="tag">
-                                    123
-                                </text>
+                            <view slot="tags" class="mb-1">
+                                <view wx:for="{{good.tags}}" wx:for-item="tag" class="tag">
+                                    {{tag}}
+                                </view>
                             </view>
                             <!-- <view slot="footer">
                                 <text>移入关注</text>

@@ -16,6 +16,7 @@ App({
                 shopName: '卡辑旗舰店',
                 hasCoupon: true,
                 goods: [{
+                    checked: true,
                     name: '卡辑汉服女仙气古装齐腰原创齐胸襦裙成人古风女生六米学生夏季薄款 含娇齐腰汉服3米（上襦+吊带+下裙+大袖衫） M',
                     desc: '含娇齐腰汉服3米（上襦+吊带+下裙+大袖衫），M',
                     img: './img/cart-1.jpg',
