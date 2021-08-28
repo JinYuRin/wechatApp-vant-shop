@@ -1,20 +1,47 @@
+const {
+    cartList
+} = getApp().globalData
 Page({
+    // 底部操作条图标
+    onClickIcon() {
+        wx.switchTab({
+            url: '/pages/cart/cart',
+        })
+    },
+    // 底部操作条按钮
+    /* 
+        加入购物车需要添加动作面板并进行sku的选择操作再加入购物车
+        !这里就先省略了
+    */
+    onClickButton() {
+        // !这里考虑用到了作用域链
+        // console.log(cartList[0].goods[0].count);
+        cartList[0].goods[0].count += 1
+        // console.log(cartList[0].goods[0].count);
+        wx.showToast({
+            title: '加入购物车成功',
+            icon: 'none',
+            duration: 2000
+        })
+    },
+    // 打开动作面板
     openActionSheet() {
         this.setData({
             show: true
         });
     },
+    // 
     change(e) {
         this.setData({
             currentSwiper: e.detail.current + 1
         })
     },
+    // 关闭动作面板
     onClose() {
         this.setData({
             show: false
         });
     },
-
     onSelect(event) {
         console.log(event.detail);
     },

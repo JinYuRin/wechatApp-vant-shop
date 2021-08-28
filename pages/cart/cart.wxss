@@ -27,6 +27,20 @@ page {
     height: 200rpx !important;
 }
 
+.coupon {
+    padding: 5rpx 10rpx !important;
+}
+
+.price {
+    color: #ee0a24;
+    font-weight: 700;
+    font-size: 24rpx;
+}
+
+.price-integer {
+    font-size: 30rpx;
+}
+
 /* 直接用这种方式来 */
 .card-title {
     line-height: 1.5 !important;
