@@ -1,2 +1,56 @@
 <view class="" style="{{'height:'+statusBarHeight+'px'}}" />
-<van-nav-bar custom-class="nav-bar" title="标题" left-arrow bind:click-left="onClickLeft" bind:click-right="onClickRight" />
+<view class="search-wrapper flex px-2">
+    <van-icon bind:click="back" name="arrow-left" />
+    <van-search use-left-icon-slot="{{true}}" focus="{{focus}}" shape="round" custom-class="search" value="{{ value }}" placeholder="{{key}}" />
+</view>
+<view class="flex" style="height:60rpx">
+    <view class="flex-2">
+        <van-dropdown-menu>
+            <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" />
+        </van-dropdown-menu>
+    </view>
+    <view class="flex-2 flex align-center justify-center van-dropdown-menu__title text-muted">
+        销量
+    </view>
+    <view class="flex-2 flex align-center justify-center van-dropdown-menu__title text-muted">
+        价格
+    </view>
+    <view bind:tap="openActionSheet" class="flex-1 flex align-center justify-center van-dropdown-menu__title text-muted">
+        筛选
+        <van-icon name="filter-o" />
+    </view>
+</view>
+<view class="py-2 px-3">
+    <!-- 这里的card要重构成新的组件，后期把 -->
+    <!-- 价格应该补两位的  price="{{good.price}}" -->
+    <!-- bind:tap可以任意加上去 -->
+    <van-card bind:tap="toSpuDetail" wx:for="{{4}}" title="{{'卡辑汉服女仙气古装齐腰原创齐胸襦裙成人古风女生六米学生夏季薄款 含娇齐腰汉服3米（上襦+吊带+下裙+大袖衫） M'}}" thumb="{{ '/img/cart-1.jpg' }}" custom-class="card" title-class="card-title" price-class="card-price" thumb-class="card-thumb">
+        <view slot="price" class="flex justify-between align-center">
+            <view class="price">
+                <text class="price-symbol">¥</text>
+                <text class="price-integer">{{198.00}}</text>
+                <text class="price-decimal"></text>
+            </view>
+        </view>
+        <view slot="desc" class="card-desc rounded-lg text-ellipsis">
+            {{'含娇齐腰汉服3米（上襦+吊带+下裙+大袖衫），M'}}
+        </view>
+        <view slot="tags" class="mb-1">
+            <view wx:for="{{1}}" wx:for-item="tag" class="tag">{{'白条三期免息'}}</view>
+        </view>
+        <!-- <view slot="footer">
+                                <text>移入关注</text>
+                                <text class="text-light-muted mx-1">|</text>
+                                <text>删除</text>
+                            </view> -->
+    </van-card>
+</view>
+<van-action-sheet z-index="{{1000}}" show="{{ show }}" title="全部筛选" bind:close="onClose" bind:select="onSelect">
+    <view class="p-3">
+        <image class="w-100" style="height:1000rpx" src="http://lencent.top/public/wanxiang/spu-detail/6.jpg" mode="aspectFill" lazy-load="{{true}}" binderror="" bindload=""></image>
+        <van-goods-action>
+            <van-goods-action-button text="重置" type="warning" bind:click="onClickButton" />
+            <van-goods-action-button text="完成" bind:click="onClickButton" />
+        </van-goods-action>
+    </view>
+</van-action-sheet>

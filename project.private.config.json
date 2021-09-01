@@ -35,6 +35,12 @@
           "pathName": "pages/my/my",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/spu-filter/spu-filter",
+          "pathName": "pages/spu-filter/spu-filter",
+          "query": "",
+          "scene": null
         }
       ]
     }

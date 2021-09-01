@@ -1,3 +1,100 @@
 .nav-bar {
     padding: 0 0 !important;
 }
+
+.search {
+    width: 480rpx;
+}
+
+.search-wrapper {
+    /* border-bottom-width: 1rpx;
+    border-bottom-style: solid;
+    border-bottom-color: #dee2e6; */
+}
+
+/* 直接抓到van-dropdown-menu他的类覆盖属性,如果需要精准,就加复合选择器 */
+.van-dropdown-menu {
+    /* flex: 1; */
+    box-shadow: none !important;
+    /* width: 15% !important; */
+    height: 100% !important;
+}
+
+.van-dropdown-menu__title {
+    font-size: 27rpx !important;
+}
+/* pages/cart/cart.wxss */
+/* page {
+    background-color: #f2f2f2;
+} */
+
+.cart-wrapper {
+    margin-bottom: 130rpx;
+}
+
+.checkbox__shop {
+    margin-bottom: 10rpx !important;
+}
+
+.checkbox__card {
+    margin-top: 5rpx !important;
+}
+
+.card {
+    background-color: #ffffff !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.van-card__header .van-card__thumb {
+    margin-right: 20rpx !important;
+    width: 200rpx !important;
+    height: 200rpx !important;
+}
+
+.coupon {
+    padding: 5rpx 10rpx !important;
+}
+
+.price {
+    color: #ee0a24;
+    font-weight: 700;
+    font-size: 24rpx;
+}
+
+.price-integer {
+    font-size: 30rpx;
+}
+
+/* 直接用这种方式来 */
+.card-title {
+    line-height: 1.5 !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.card-desc {
+    background-color: rgba(0, 0, 0, .03);
+    margin-top: 5rpx !important;
+    margin-bottom: 5rpx !important;
+}
+
+.card-price .van-card__price-integer {
+    font-size: 32.5rpx !important;
+}
+
+.tag {
+    color: #f2270c;
+}
+
+.rounded-lg-my {
+    border-radius: 30rpx;
+}
+
+.card-title {
+    font-size: 30rpx;
+    font-weight: normal !important;
+}

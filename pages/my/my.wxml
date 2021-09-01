@@ -53,5 +53,4 @@
     <van-grid border="{{false}}" custom-class="grid" column-num="5">
         <van-grid-item info="{{1}}" content-class="grid-item-content2" wx:for-item="cate" wx:key="id" icon="{{cate.icon}}" text="{{cate.text}}" wx:for="{{ list2 }}" />
     </van-grid>
-    
 </view>

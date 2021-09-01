@@ -1,0 +1,19 @@
+
+/* 组件无法直接使用全局样式吗 */
+
+.rounded-lg-my {
+    border-radius: 30rpx;
+}
+
+.p-3 {
+    padding: 30rpx;
+}
+
+.my-2 {
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}

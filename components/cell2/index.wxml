@@ -1,0 +1,3 @@
+<view class="rounded-lg-my my-2 bg-white p-3">
+    <slot />
+</view>

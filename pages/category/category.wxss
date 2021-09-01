@@ -2,7 +2,18 @@
 .grid-item {
     height: 180rpx !important;
 }
-.grid-item-text{
+
+.grid-item-text {
     margin-top: auto !important;
     font-size: 27rpx !important;
+}
+
+.search {
+    width: 520rpx;
+}
+
+.search-wrapper {
+    border-bottom-width: 1rpx;
+    border-bottom-style: solid;
+    border-bottom-color: #dee2e6;
 }

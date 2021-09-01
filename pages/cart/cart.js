@@ -11,6 +11,44 @@ Component({
    * 页面的初始数据
    */
   data: {
+    // 瀑布流数据
+    waterFlow: [{
+      image: 'http://lencent.top/public/wanxiang/home/spu1.jpg',
+      title: '显瘦中长款系带风衣',
+      describe: '柔软顺滑、上身挺括显瘦，垂坠飘逸、不易皱好打理。',
+      count: '888',
+      delCount: '666'
+    }, {
+      image: 'http://lencent.top/public/wanxiang/home/spu2.jpg',
+      title: '汉服女原创春夏',
+      describe: '异志阁 原创情侣重工汉服[玉鸾•梵翎秋冬交领襦裙一片式齐腰襦裙',
+      count: '888',
+      delCount: '666'
+    }, {
+      image: 'http://lencent.top/public/wanxiang/home/spu3.jpg',
+      title: '汉服女原创春夏',
+      describe: '柔软顺滑垂坠飘逸。',
+      count: '888',
+      delCount: '666'
+    }, {
+      image: 'http://lencent.top/public/wanxiang/home/spu4.jpg',
+      title: '汉服女原创春夏',
+      describe: '异志阁 原创情侣重工汉服[玉鸾•梵翎秋冬交领襦裙一片式齐腰襦裙',
+      count: '888',
+      delCount: '666'
+    }, {
+      image: 'http://lencent.top/public/wanxiang/home/spu5.jpg',
+      title: '汉服女原创春夏',
+      describe: '异志阁 原创情侣重工汉服[玉鸾•梵翎秋冬交领襦裙一片式齐腰襦裙',
+      count: '888',
+      delCount: '666'
+    }, {
+      image: 'http://lencent.top/public/wanxiang/home/spu6.jpg',
+      title: '汉服女原创春夏',
+      describe: '异志阁 原创情侣重工汉服[玉鸾•梵翎秋冬交领襦裙一片式齐腰襦裙',
+      count: '888',
+      delCount: '666'
+    }],
     // checked: true,
     imageURL: '/img/cart-1.jpg',
     /*  */
@@ -71,6 +109,13 @@ Component({
   },
 
   methods: {
+    /* 去结算 */
+    onSubmit() {
+      wx.navigateTo({
+        url: '/pages/order-comfirm/order-comfirm'
+      })
+    },
+
     /*更改商品的数量  */
     changeCount(event) {
       let {
@@ -95,6 +140,8 @@ Component({
       let {
         cartList
       } = this.data
+      // 沃日,setData竟然是直接引用这个全局变量cartList的地址
+      // console.log(getApp().globalData.cartList === cartList);
       cartList.forEach((shop, index) => {
         shop.goods.forEach(good => {
           good.checked = checkAll
@@ -137,7 +184,12 @@ Component({
         cartList
       })
     },
-
+    toSpuDetail() {
+      console.log('正在跳转，请注意把page页面加到app.json去');
+      wx.navigateTo({
+        url: '/pages/spu-detail/spu-detail'
+      })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -163,6 +215,9 @@ Component({
           icon: 'none',
           duration: 2000
         })
+      wx.lin.renderWaterFlow(this.data.waterFlow, false, () => {
+        console.log('渲染成功')
+      })
       // console.log('setData后', this.data.cartList);
     },
 
@@ -178,8 +233,13 @@ Component({
      * onShow显示后要抓到新的cartList数据才行
      */
     onShow: function () {
-      // 暂时先调用onLoad顶住个肚
+      // 暂时先调用onLoad顶住个肚,每次onShow的时候又得到了全局变量cartList了
       this.onLoad()
+      // 调用自带的pageScrollTo就可以回到特定位置了
+      setTimeout(() => wx.pageScrollTo({
+        scrollTop: 0,
+        duration: 1000
+      }), 5000)
     },
 
     /**

@@ -1,0 +1,18 @@
+<s-cell>123</s-cell>
+<s-cell>123</s-cell>
+<s-cell>123</s-cell>
+<s-cell>123</s-cell>
+<s-cell>123</s-cell>
+<s-cell>123</s-cell>
+<van-submit-bar price="{{ 1190*100 }}" button-text="微信支付" bind:submit="onSubmit" tip="{{ true }}">
+    <!-- <van-tag type="primary">标签</van-tag> -->
+    <!-- <van-radio-group value="{{ allChecked }}">
+        <van-radio name="{{true}}">全选</van-radio>
+        <van-radio name="2">单选框 2</van-radio>
+    </van-radio-group> -->
+    <!-- <van-checkbox value="{{ allChecked }}" bind:change="checkAll">全选</van-checkbox> -->
+    <!-- <view slot="tip">
+        您的收货地址不支持同城送,
+        <text>修改地址</text>
+    </view> -->
+</van-submit-bar>

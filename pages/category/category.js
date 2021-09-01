@@ -25,16 +25,23 @@ Page({
   },
   // 进入商品过滤页面
   toSpuFilter() {
+    // key应该可以做成一个数组！！！
     wx.navigateTo({
-      url: '/pages/spu-filter/spu-filter'
+      url: '/pages/spu-filter/spu-filter?key=空调'
     })
+  },
+  searchFocus() {
+    this.toSpuFilter()
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(wx.getSystemInfoSync().statusBarHeight);
+    this.setData({
+      statusBarHeight: wx.getSystemInfoSync().statusBarHeight
+    })
   },
 
   /**

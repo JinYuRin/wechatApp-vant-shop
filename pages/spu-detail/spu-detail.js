@@ -13,15 +13,24 @@ Page({
         加入购物车需要添加动作面板并进行sku的选择操作再加入购物车
         !这里就先省略了
     */
-    onClickButton() {
+    addToCart() {
         // !这里考虑用到了作用域链
         // console.log(cartList[0].goods[0].count);
         cartList[0].goods[0].count += 1
+        console.log(cartList);
         // console.log(cartList[0].goods[0].count);
         wx.showToast({
             title: '加入购物车成功',
             icon: 'none',
             duration: 2000
+        })
+    },
+    /* 
+    立即购买
+    */
+    buy() {
+        wx.navigateTo({
+            url: '/pages/order-comfirm/order-comfirm'
         })
     },
     // 打开动作面板
