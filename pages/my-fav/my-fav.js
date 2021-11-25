@@ -51,6 +51,7 @@ Page({
     //   icon: 'none',
     // });
   },
+  // *空收藏下的去逛逛按钮的页面跳转逻辑
   toShop() {
     wx.switchTab({
       url: '/pages/home/home',
