@@ -1,2 +1,18 @@
-<!--pages/my-fav/my-fav.wxml-->
-<text>pages/my-fav/my-fav.wxml</text>
+<van-tabs tab-active-class="tab-active-class" active="{{ active }}" bind:change="onChange">
+    <van-tab title="商品">
+        <view class="flex flex-column justify-center align-center py-5" >
+            <image style="width:200rpx;height:200rpx" class="" src="/img/fav-empty.png" mode="aspectFit" lazy-load="false" binderror="" bindload="">
+            </image>
+            <view class="py-2">
+                您还没有关注商品
+            </view>
+            <van-button plain round bind:click="toShop" type="info">去商场逛逛</van-button>
+        </view>
+        <!-- 瀑布流 -->
+        <view class="text-center px-2 pb-1 font text-muted">**您可能喜欢**</view>
+        <view class="p-1">
+            <l-water-flow bind:toSpuDetail="toSpuDetail" column-gap="10rpx" generic:l-water-flow-item="water-fall-item" />
+        </view>
+    </van-tab>
+    <van-tab title="店铺"></van-tab>
+</van-tabs>

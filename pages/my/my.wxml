@@ -37,11 +37,14 @@
             </view>
         </view>
     </view>
+    <!-- 功能入口 -->
     <!-- 关于index的值的获取，一个简单思路就是在wxml中把data-key的值设为{{index}}，在js文件中通过currentTarget.dataset.key就可以获取到了。具体的可以参阅官方文档中框架——事件——target的说明。 -->
     <van-grid border="{{false}}" custom-class="grid" column-num="4">
-        <van-grid-item info="{{1}}" content-class="grid-item-content" wx:for-item="cate" wx:key="id" icon="{{cate.icon}}" text="{{cate.text}}" wx:for="{{ list1 }}" />
+        <van-grid-item data-id="{{cate.id}}" bind:click="clickPort" info="{{1}}" content-class="grid-item-content"
+        wx:for-item="cate" wx:key="id" icon="{{cate.icon}}" text="{{cate.text}}" wx:for="{{ list1 }}" />
     </van-grid>
 </view>
+<!-- 我的订单入口 -->
 <view class="mx-1 p-2 bg-white rounded-lg-my mb-3">
     <view class="flex align-center justify-between mb-2">
         <view class="font font-weight-bold">我的订单</view>

@@ -44,6 +44,28 @@ Page({
       id: 4
     }, ]
   },
+  // 点击入口，采用多重解构
+  clickPort({
+    currentTarget: {
+      dataset: {
+        id
+      }
+    }
+  }) {
+    // let {id} = event.currentTarget.dataset
+    console.log(id);
+    switch (id) {
+      case 0:
+        wx.navigateTo({
+          url: '/pages/my-fav/my-fav'
+        })
+        break;
+
+      default:
+        return
+        break;
+    }
+  },
 
   /**
    * 生命周期函数--监听页面加载
